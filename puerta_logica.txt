@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string nombre;
+    int edad;
+    double promedio;
+    int club;
+
+    cout << "Escriba su nombre completo: ";
+    getline(cin, nombre);
+
+    cout << "Digite su edad: ";
+    cin >> edad;
+
+    cout << "Ingrese su promedio general: ";
+    cin >> promedio;
+
+    cout << "¿Forma parte del club de programacion?: ";
+    cin >> club;
+
+    if ((edad >= 18 && promedio >= 85) ||
+        (club == 1 && promedio >= 75) ||
+        (promedio >= 95)) {
+
+        if (nombre == "David Alvarez") {
+            cout << "\nHola " << nombre << endl;
+            cout << "Se le ha otorgado acceso especial al sistema." << endl;
+        } else {
+            cout << "\nHola " << nombre << endl;
+            cout << "Su acceso ha sido aprobado." << endl;
+        }
+
+    } else if (nombre == "David Alvarez") {
+        cout << "\nHola " << nombre << endl;
+        cout << "Se le ha otorgado acceso especial al sistema." << endl;
+
+    } else {
+        cout << "\nNo cumple con los requisitos para ingresar." << endl;
+    }
+
+    cout << "\nPrograma realizado por: Jose Miguel Argueta Reyes" << endl;
+
+    return 0;
+}
